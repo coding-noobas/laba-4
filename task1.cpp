@@ -12,12 +12,16 @@
 void is_natural(int32_t* x) {
     while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Please enter integer: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
 
 void is_int(int32_t* x) {
     while (!(std::cin >> *x) || *x != static_cast<int32_t>(*x)) {
         std::cout << "Please enter integer: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
 
@@ -121,3 +125,4 @@ int32_t main() {
 
     return 0;
 }
+
